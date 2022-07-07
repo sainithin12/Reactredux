@@ -1,0 +1,49 @@
+{
+    "name": "react-courses",
+    "version": "0.1.0",
+    "private": true,
+    "homepage": "http://iahmediibrahim.github.io/react-courses",
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.11.4",
+        "@testing-library/user-event": "^12.1.10",
+        "bootstrap": "^4.6.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-redux": "^7.2.6",
+        "react-router-dom": "^6.0.2",
+        "react-scripts": "4.0.3",
+        "react-test-renderer": "^17.0.2",
+        "react-toastify": "^8.1.0",
+        "redux": "^4.1.2",
+        "redux-immutable-state-invariant": "^2.1.0",
+        "redux-thunk": "^2.4.1",
+        "web-vitals": "^1.0.1"
+    },
+    "devDependencies": {
+        "@testing-library/react": "^12.1.2",
+        "@wojtekmaj/enzyme-adapter-react-17": "^0.6.5",
+        "enzyme": "^3.11.0",
+        "json-server": "^0.17.0",
+        "lint-staged": "^12.1.2",
+        "nodemon": "^2.0.15",
+        "npm-run-all": "^4.1.5"
+    },
+    "scripts": {
+        "start": "run-p start:dev start:api",
+        "start:dev": "react-scripts start",
+        "prestart:api": "node src/tools/createMockDb.js",
+        "start:api": "nodemon --ignore src/tools/db.json src/tools/apiServer.js",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
+    },
+    "eslintConfig": {
+        "extends": [ "react-app", "react-app/jest" ]
+    },
+    "browserslist": {
+        "production": [ ">0.2%", "not dead", "not op_mini all" ],
+        "development": [ "last 1 chrome version", "last 1 firefox version", "last 1 safari version" ]
+    }
+}
